@@ -36,6 +36,11 @@ jobs:
       uses: ad-m/github-push-action@v0.5.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.5.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: develop
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
