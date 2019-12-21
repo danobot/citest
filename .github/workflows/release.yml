@@ -1,28 +1,19 @@
-name: Node CI
-
-on: 
+on:
   push:
-    branches:
-      - master
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+name: Create Release
 
 jobs:
   build:
-
+    name: Create Release
     runs-on: ubuntu-latest
-
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: prepare release
-      run: |
-        npm run release
-      env:
-        CI: true
-    - name: Create Release
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
