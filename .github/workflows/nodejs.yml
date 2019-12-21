@@ -32,7 +32,7 @@ jobs:
     - name: set environment variables
       uses: allenevans/set-env@v1.0.0
       with:
-       PACKAGE_VERSION : $(node -p -e "require('./package.json').version")
+        PACKAGE_VERSION : $(node -p -e "require('./package.json').version")
 
     
     - name: Push changes
@@ -45,7 +45,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.ref }}
+        tag_name: v${{ PACKAGE_VERSION }}
         release_name: ${{PACKAGE_VERSION}}
         draft: false
         prerelease: false
