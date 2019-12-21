@@ -1,7 +1,7 @@
 """
 Maintainer:       Daniel Mason
-Version:          v4.1.6
+Version:          v4.1.10
 """
 
 
-VERSION = '4.1.6'
+VERSION = '4.1.10'
