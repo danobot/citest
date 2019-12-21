@@ -1,6 +1,10 @@
 {
   "name": "citest",
+<<<<<<< HEAD
   "version": "4.1.11",
+=======
+  "version": "4.1.10",
+>>>>>>> master
   "description": "",
   "main": "index.js",
   "directories": {

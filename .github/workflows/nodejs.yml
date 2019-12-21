@@ -18,23 +18,32 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+      
     - name: prepare release
       run: |
         npm install
         npm run release
       env:
         CI: true
+    - name: Set env
+      run: echo ::set-env name=PACKAGE_VERSION::$(node -p -e "require('./package.json').version")  
+
+    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          Changes in this Release
-          - First Change
-          - Second Change
+        tag_name: v${{ env.PACKAGE_VERSION }}
+        release_name: ${{ env.PACKAGE_VERSION}}
         draft: false
         prerelease: false
