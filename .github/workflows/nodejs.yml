@@ -20,6 +20,7 @@ jobs:
         node-version: '12.x'
     - name: prepare release
       run: |
+        npm install
         npm run release
       env:
         CI: true
