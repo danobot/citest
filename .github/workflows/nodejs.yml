@@ -27,6 +27,7 @@ jobs:
       run: |
         npm install
         npm run release
+        ::set-env name={PACKAGE_VERSION}::{$(node -p -e "require('./package.json').version")}
       env:
         CI: true
     
@@ -41,7 +42,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        release_name: ${{PACKAGE_VERSION}}
         body: |
           Changes in this Release
           - First Change
