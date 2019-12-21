@@ -1,10 +1,10 @@
 """
 Maintainer:       Daniel Mason
-Version:          v5.0.0
+Version:          v5.0.1
 """
 
 
-VERSION = '5.0.0'
+VERSION = '5.0.1'
 
 # new change
 # new change

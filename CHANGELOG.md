@@ -2,17 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# [5.0.0](https://github.com/danobot/citest/compare/v4.2.0...v5.0.0) (2019-12-21)
-
-
-### Features
-
-* a nice change ([dfb2b8c](https://github.com/danobot/citest/commit/dfb2b8c7275295b78e33d108fdca9f174ab6a7d3))
-
-
-### BREAKING CHANGES
-
-* users need to update their configuration.
+## [5.0.1](https://github.com/danobot/citest/compare/v5.0.0...v5.0.1) (2019-12-21)
 
 
 
