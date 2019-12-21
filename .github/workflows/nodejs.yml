@@ -30,9 +30,9 @@ jobs:
       env:
         CI: true
     - name: set environment variables
-        uses: allenevans/set-env@v1.0.0
-        with:
-          : $(node -p -e "require('./package.json').version")
+      uses: allenevans/set-env@v1.0.0
+      with:
+       PACKAGE_VERSION : $(node -p -e "require('./package.json').version")
 
     
     - name: Push changes
