@@ -1,9 +1,9 @@
 """
 Maintainer:       Daniel Mason
-Version:          v4.1.12
+Version:          v4.1.13
 """
 
 
-VERSION = '4.1.12'
+VERSION = '4.1.13'
 
 # new change
