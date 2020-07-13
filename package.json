@@ -17,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "semantic-release": "^15.13.3",
-    "standard-version": "^4.4.0",
+    "standard-version": "^8.0.1",
     "replace-in-file": "^3.4.3"
   },
   "standard-version": {
